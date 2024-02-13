@@ -1,14 +1,13 @@
 # Microservice para envio de Email
 
-<p> O projeto visa desenvolver habilidades no microserviço e conhecimentos básicos em SpringMail</p>
+<p> O projeto visa desenvolver habilidades no microserviço e conhecimentos básicos em Mensageria</p>
 
-<h3>Status do Projeto</h3>
+### Status do Projeto
 <p align="center"> 🏆 FINALIZADO 🏆</p>
 
-<h3>Features</h3>
+### Features
 
 ✔️ A aplicação deve permitir o envio de email com: Remetente, Destinatário, Titulo e Corpo de Email  <br>
-
 
 ## Demostração da Aplicação 
  Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas:
@@ -55,9 +54,17 @@ No Terminal/Console:
 	<li>Esteja com o Banco de Dados PostgreSQL ativo ou o programa não executará</li>
 </ol>
 
+## Sobre o Projeto
+
 Este projeto foi construido utilizando: <img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
 <img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
-          
+
+Este projeto utiliza o padrão SMTP do Gmail para ser o Remetente dos emails enviados;
+Foi utilizado os seguintes serviços para o disparo de emails de testes: 
+<ul>
+	<li>Spring Mail</li>
+	<li>Spring AMQP para uso do serviço RabbitMQ</li>
+</ul>
 
 ## Autor
 <a href="https://www.linkedin.com/in/jefferson-pedro-8a6264b9/">
