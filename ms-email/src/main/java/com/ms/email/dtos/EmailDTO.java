@@ -2,9 +2,8 @@ package com.ms.email.dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
+import jakarta.validation.constraints.NotNull;
 
-@Data
 public class EmailDTO {
 	
 	@NotBlank
@@ -12,17 +11,23 @@ public class EmailDTO {
 	
 	@Email
 	@NotBlank
+	@NotNull
 	private String emailFrom;
 	
 	@Email
 	@NotBlank
+	@NotNull
 	private String emailTo;
 	
 	@NotBlank
+	@NotNull
 	private String subject;
 	
 	@NotBlank
-	private String textString;
+	@NotNull
+	private String text;
+	
+	//GET E SET
 
 	public String getOwnerRef() {
 		return ownerRef;
@@ -56,13 +61,17 @@ public class EmailDTO {
 		this.subject = subject;
 	}
 
-	public String getTextString() {
-		return textString;
+	public String getText() {
+		return text;
 	}
 
-	public void setTextString(String textString) {
-		this.textString = textString;
+	public void setText(String text) {
+		this.text = text;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "EmailDTO [ownerRef=" + ownerRef + ", emailFrom=" + emailFrom + ", emailTo=" + emailTo + ", subject="
+				+ subject + ", text=" + text + "]";
+	}
 }
