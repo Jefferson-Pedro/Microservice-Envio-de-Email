@@ -24,7 +24,9 @@ public class EmailService {
 	private JavaMailSender eMailSender;
 
 	public Email sendEmail(EmailDTO emailDTO) {
+		
 		Email email = convertDTOToEmail(emailDTO);
+		
 		email.setSendDateEmaiL(LocalDateTime.now());
 		
 		try {
@@ -37,17 +39,19 @@ public class EmailService {
 			
 			email.setStatusEmail(StatusEmail.SENT);
 		} catch (MailException e) {
+			System.err.println(e.getMessage());
 			email.setStatusEmail(StatusEmail.ERROR);
+			
 		}finally {
 			return repository.save(email);
 		}
-		
-		
 	}
 	
 	private Email convertDTOToEmail(EmailDTO emailDTO) {
+		
 		Email emailModel = new Email();
 		BeanUtils.copyProperties(emailDTO, emailModel);
+		
 		return emailModel;
 	}
 }
