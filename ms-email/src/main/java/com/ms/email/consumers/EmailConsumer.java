@@ -15,9 +15,8 @@ public class EmailConsumer {
 	@Autowired
 	EmailService service;
 	
-	@RabbitListener(queues = "${spring.rabbitmq.queue}")
+	@RabbitListener(queues = "ms.email")
 	public void listen(@Payload EmailDTO emailDTO) {
-		
 		Email emailModel = service.sendEmail(emailDTO);
 		System.out.println("Email Status: " + emailModel.getStatusEmail().toString());
 	}
