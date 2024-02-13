@@ -59,8 +59,8 @@ No Terminal/Console:
 Este projeto foi construido utilizando: <img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
 <img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
 
-Este projeto utiliza o padrão SMTP do Gmail para ser o Remetente dos emails enviados;
-Foi utilizado os seguintes serviços para o disparo de emails de testes: 
+Este projeto utiliza o padrão SMTP do Gmail para o envio de emails;
+Foi utilizado os seguintes serviços neste projeto: 
 <ul>
 	<li>Spring Mail</li>
 	<li>Spring AMQP para uso do serviço RabbitMQ</li>
