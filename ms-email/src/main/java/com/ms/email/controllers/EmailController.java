@@ -21,11 +21,8 @@ public class EmailController {
 	@PostMapping("/sending-email")
 	public ResponseEntity<Email> sendingEmail(@RequestBody @Valid EmailDTO emailDTO){
 		
-		Email emailModel = service.sendEmail(emailDTO);
-		if (emailModel != null) {
-			return ResponseEntity.ok(emailModel);
-		}
-		return ResponseEntity.badRequest().build();
+		Email email = service.sendEmail(emailDTO);
+		return ResponseEntity.ok(email);
 	}
 	
 }
