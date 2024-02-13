@@ -2,6 +2,7 @@ package com.ms.email.models;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import com.ms.email.enums.StatusEmail;
 
@@ -20,7 +21,7 @@ public class Email  implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private UUID id;
 	
 	private String ownerRef;
 	
@@ -37,11 +38,11 @@ public class Email  implements Serializable{
 	
 	private StatusEmail statusEmail;
 
-	public Long getId() {
+	public UUID getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(UUID id) {
 		this.id = id;
 	}
 
