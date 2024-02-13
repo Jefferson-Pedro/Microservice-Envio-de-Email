@@ -8,6 +8,8 @@
 ### Features
 
 ✔️ A aplicação deve permitir o envio de email com: Remetente, Destinatário, Titulo e Corpo de Email  <br>
+✔️ A aplicação deve permitir a recuperação de todos os emails enviados  <br>
+✔️ A aplicação deve permitir a recuperação de emails enviados via ID <br>
 
 ## Demostração da Aplicação 
  Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas:
