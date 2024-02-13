@@ -11,9 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.Data;
 
-@Data
 @Entity
 @Table(name="tb_email")
 public class Email  implements Serializable{
@@ -21,7 +19,7 @@ public class Email  implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String ownerRef;
@@ -83,7 +81,7 @@ public class Email  implements Serializable{
 		return text;
 	}
 
-	public void setTextString(String text) {
+	public void setText(String text) {
 		this.text = text;
 	}
 
@@ -106,7 +104,11 @@ public class Email  implements Serializable{
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "Email [id=" + id + ", ownerRef=" + ownerRef + ", emailFrom=" + emailFrom + ", emailTo=" + emailTo
+				+ ", subject=" + subject + ", text=" + text + ", sendDateEmaiL=" + sendDateEmaiL + ", statusEmail="
+				+ statusEmail + "]";
+	}
 }
