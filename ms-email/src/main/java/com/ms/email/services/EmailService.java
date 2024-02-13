@@ -1,9 +1,13 @@
 package com.ms.email.services;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.mail.MailException;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -14,6 +18,8 @@ import com.ms.email.enums.StatusEmail;
 import com.ms.email.models.Email;
 import com.ms.email.repositories.EmailRepository;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class EmailService {
 	
@@ -23,6 +29,7 @@ public class EmailService {
 	@Autowired
 	private JavaMailSender eMailSender;
 
+	@Transactional
 	public Email sendEmail(EmailDTO emailDTO) {
 		
 		Email email = convertDTOToEmail(emailDTO);
@@ -45,6 +52,19 @@ public class EmailService {
 		}finally {
 			return repository.save(email);
 		}
+	}
+	
+	public Page<Email> findAll(Pageable pageable){
+		return repository.findAll(pageable);
+	}
+	
+	public Email findById(UUID id){
+		Optional<Email> emailModelOptional = repository.findById(id);
+		if (emailModelOptional.isPresent()) {
+			Email email = emailModelOptional.get();
+			return email;
+		}
+		return null;
 	}
 	
 	private Email convertDTOToEmail(EmailDTO emailDTO) {
