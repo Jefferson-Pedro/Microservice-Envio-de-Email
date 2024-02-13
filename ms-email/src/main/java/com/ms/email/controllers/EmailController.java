@@ -39,7 +39,7 @@ public class EmailController {
 	}
 	
 	@GetMapping("/emails")
-	public ResponseEntity<Page<Email>> getAllEmails(@PageableDefault(page = 0, size = 5, sort = "emailId", direction = Sort.Direction.DESC)Pageable pageable){
+	public ResponseEntity<Page<Email>> getAllEmails(@PageableDefault(page = 0, size = 5, sort = "id", direction = Sort.Direction.DESC)Pageable pageable){
 		
 		logger.trace("TRACE");
 		logger.debug("DEBUG");
