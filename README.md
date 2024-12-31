@@ -58,8 +58,10 @@ No Terminal/Console:
 
 ## Sobre o Projeto
 
-Este projeto foi construido utilizando: <img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+Este projeto foi construido utilizando: 
+<img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
 <img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
+<img align="center" alt="Icon-Java" height="40" width="50" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg" />
 
 Este projeto utiliza o padrão SMTP do Gmail para o envio de emails;
 Foi utilizado os seguintes serviços neste projeto: 
